@@ -54,7 +54,7 @@ function generateCircles(n) {
         let x = Math.random() * (window_width - radius * 2) + radius;
         let y = Math.random() * (window_height - radius * 2) + radius;
         let color = `#${Math.floor(Math.random() * 16777215).toString(16)}`; // Color aleatorio
-        let speed = Math.random() * 2 + 1; // Velocidad entre 1 y 3
+        let speed = Math.random() * 4 + 1; // Velocidad entre 1 y 5
         let text = `C${i + 1}`; // Etiqueta del círculo
         circles.push(new Circle(x, y, radius, color, text, speed));
     }
@@ -68,5 +68,5 @@ function animate() {
     requestAnimationFrame(animate); // Repetir la animación
 }
 // Generar N círculos y comenzar la animación
-generateCircles(5); // Puedes cambiar el número de círculos aquí
+generateCircles(10); // Puedes cambiar el número de círculos aquí
 animate();
